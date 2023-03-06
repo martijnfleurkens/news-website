@@ -1,0 +1,44 @@
+
+.list
+  position: relative
+  padding: 0
+  min-width: 400px
+
+  &:before
+    content: " "
+    position: absolute
+    width: 3px
+    height: calc( 100% - 70px)
+    top: 35px
+    left: 20px
+    background: linear-gradient(180deg, $bg1, $bg2, $bg3, $bg4, $bg5, $bg6)
+    border-radius: $radius
+    z-index: 1
+
+  li
+    a
+      position: relative
+
+      &:before
+        content: " "
+        height: 15px
+        width: 15px
+        border-radius: 100px
+        position: absolute
+        display: block
+        left: 14px
+        z-index: 2
+        top: calc(50% - 7.5px)
+
+    @each $key, $val in $bg-array
+      &:nth-child( #{$key} ) a::before
+        background-color: $val
+
+@media (max-width: 1300px)
+  .list
+    min-width: 300px
+
+@media (max-width: $breakpoint-mobile)
+
+  .list
+    min-width: unset

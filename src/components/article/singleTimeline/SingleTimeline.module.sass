@@ -1,0 +1,55 @@
+
+.listItem
+  list-style-type: none
+  font-size: $p-l
+
+  a
+    color: $text
+    text-decoration: none
+    padding: 20px 30px 20px 140px
+    background: $background-light-transparent
+    border-radius: $radius
+    position: relative
+    height: 85px
+    box-sizing: border-box
+    display: flex
+    align-items: center
+    transition: 0.2s all ease-in-out
+    margin-bottom: 20px
+
+    &:hover
+      transform: translateY(-5px)
+      transition: 0.2s all ease-in-out
+      text-decoration: underline
+
+    p
+      font-size: $p-l
+      margin: 0
+      max-height: 2.8em
+      overflow: hidden
+
+    span
+      position: absolute
+      display: flex
+      padding: 20px 20px 20px 40px
+      left: 0
+      top: 0
+      height: 100%
+      width: 120px
+      border-top-left-radius: $radius
+      border-bottom-left-radius: $radius
+      background: $background-light-transparent
+      box-sizing: border-box
+      align-items: center
+
+  @media(max-width: 1200px)
+
+    a
+      font-size: $p
+      padding-left: 120px
+
+      p
+        font-size: $p
+
+      span
+        width: 100px

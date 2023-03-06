@@ -1,0 +1,36 @@
+
+.listItem
+  list-style-type: none
+  max-width: 850px
+
+  a
+    color: white
+    text-decoration: none
+    font-size: $p-l
+    display: block
+    padding: 20px 0
+    border-top: 1px solid white
+
+    span
+      display: block
+      transition: 0.2s all ease-in-out
+      max-height: 1.2em
+      overflow: hidden
+
+    &:hover span
+      transform: translateX(10px)
+      transition: 0.2s all ease-in-out
+      text-decoration: underline
+
+  @media(max-width: 1200px)
+
+    a
+      font-size: $p
+
+  @media(max-width: $breakpoint-mobile)
+
+    a
+      font-size: $p-s
+
+      span
+        max-height: none

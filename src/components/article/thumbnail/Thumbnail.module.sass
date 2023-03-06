@@ -1,0 +1,39 @@
+
+.thumbnail
+  text-decoration: none
+  color: $text
+  max-width: 850px
+  display: block
+  margin-bottom: 30px
+
+  figure
+    margin: 0
+    position: relative
+    transition: 0.2s all ease-in-out
+
+  img
+    object-fit: cover
+    border-radius: $radius
+    width: 100%
+
+  figcaption
+    position: absolute
+    bottom: 0
+    padding: 20px 35px
+
+  &:hover
+    figure
+      transform: translateX(10px)
+      transition: 0.2s all ease-in-out
+
+    h1
+      text-decoration: underline
+
+@media (max-width: $breakpoint-mobile)
+
+  .thumbnail
+    img
+      height: 250px
+
+    figcaption
+      padding: 10px 20px
